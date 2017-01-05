@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nsru.demsomboon.ratchasak.phijitcoffee.ComfirmOrder"
+    android:background="@android:color/holo_green_light">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linbottomConfirm">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add More"
+            android:id="@+id/button8"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:onClick="clickAddMore" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Confirm Order"
+            android:id="@+id/button9"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:onClick="clickConfirmOrder" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView17"
+        android:textSize="@dimen/h1"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/linbottomConfirm"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView17"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:background="#96ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/headconfirm"
+            android:id="@+id/textView18"
+            android:textSize="@dimen/h1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView19"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView20"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView21"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView22"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView23"
+            android:textSize="@dimen/h2"
+            android:textColor="@color/text" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Coffee"
+                android:id="@+id/textView24"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic"
+                android:layout_weight="2"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:id="@+id/textView25"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic"
+                android:layout_weight="1"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:id="@+id/textView26"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic"
+                android:layout_weight="1"
+                android:textColor="@color/text" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView2" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nsru.demsomboon.ratchasak.phijitcoffee.OrderActivity"
+    android:background="@android:color/holo_green_light">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/readorder"
+        android:id="@+id/button7"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/text"
+        android:onClick="clickReadOrder" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/headorder"
+        android:id="@+id/textView16"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/h1"
+        android:textColor="@color/text" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/textView16"
+        android:layout_above="@+id/textView27"
+        android:layout_margin="15dp"
+        android:background="#82ffffff" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ragHr"
+        android:layout_above="@+id/button7"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1 Hr"
+            android:id="@+id/radioButton"
+            android:layout_weight="1"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2 Hr"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3 Hr"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="4 Hr"
+            android:id="@+id/radioButton4"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hr"
+        android:id="@+id/textView27"
+        android:textSize="@dimen/h2"
+        android:textColor="@color/text"
+        android:layout_above="@+id/ragHr"
+        android:layout_marginLeft="15dp" />
+</RelativeLayout>
