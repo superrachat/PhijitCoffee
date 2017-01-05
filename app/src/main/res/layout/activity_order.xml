@@ -44,7 +44,7 @@
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="1 Hr"
+            android:text="@string/hr1"
             android:id="@+id/radioButton"
             android:layout_weight="1"
             android:checked="true" />
@@ -52,21 +52,21 @@
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="2 Hr"
+            android:text="@string/hr2"
             android:id="@+id/radioButton2"
             android:layout_weight="1" />
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="3 Hr"
+            android:text="@string/hr3"
             android:id="@+id/radioButton3"
             android:layout_weight="1" />
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="4 Hr"
+            android:text="@string/hr4"
             android:id="@+id/radioButton4"
             android:layout_weight="1" />
     </RadioGroup>

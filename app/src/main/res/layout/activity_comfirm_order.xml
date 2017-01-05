@@ -16,7 +16,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Add More"
+            android:text="@string/addmore"
             android:id="@+id/button8"
             android:layout_weight="1"
             android:textColor="@color/text"
@@ -25,7 +25,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Confirm Order"
+            android:text="@string/confirmorder"
             android:id="@+id/button9"
             android:layout_weight="1"
             android:textColor="@color/text"
@@ -124,7 +124,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Coffee"
+                android:text="@string/coffee"
                 android:id="@+id/textView24"
                 android:textSize="@dimen/h2"
                 android:textStyle="italic"
@@ -134,7 +134,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Price"
+                android:text="@string/price"
                 android:id="@+id/textView25"
                 android:textSize="@dimen/h2"
                 android:textStyle="italic"
@@ -144,7 +144,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Amount"
+                android:text="@string/amount"
                 android:id="@+id/textView26"
                 android:textSize="@dimen/h2"
                 android:textStyle="italic"
@@ -157,4 +157,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/listView2" />
     </LinearLayout>
+
+    <TextView
+        android:text="@string/touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView43"
+        android:layout_above="@+id/linbottomConfirm"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp" />
 </RelativeLayout>

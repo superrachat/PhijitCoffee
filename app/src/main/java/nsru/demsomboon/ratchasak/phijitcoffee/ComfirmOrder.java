@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -85,13 +86,39 @@ public class ComfirmOrder extends AppCompatActivity {
     }//myDeltetOrder
 
     private void showView() {
-        refTextView.setText("ref = "+ refString);
-        dateTextView.setText(dateString);
-        nameAnSurTextView.setText(nameAnSurString);
-        timeTextView.setText("เวลารับกาแฟ"+ timeString);
-        addressTextView.setText(addressString);
+        refTextView.setText("รหัสใบเสร็จ "+ refString);
+        String thaiDate = myConvertThaiDate(dateString);
+        dateTextView.setText("วันที่สั่ง" + thaiDate);
 
-    }
+        nameAnSurTextView.setText("ชื่อลูกค้า" + nameAnSurString);
+        timeTextView.setText("เวลารับกาแฟ"+ timeString);
+        addressTextView.setText("ที่อยู่" + addressString);
+
+    }//showView
+    private String myConvertThaiDate(String dataString) {
+        String tag = "5janV1", strResult = null;
+        String[] monthThai = new String[]{"ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.",
+                "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค." };
+        Log.d(tag, "Date ==>" + dataString);
+        String[] strings = dataString.split("-");
+        for (int i = 0; i < strings.length; i++) {
+            Log.d(tag, "strings(" + i + ")==>" + strings[i]);
+
+        }
+        //for
+        int intDate = Integer.parseInt(strings[0]);
+        int intMonth = Integer.parseInt(strings[1]);
+        int intYear = Integer.parseInt(strings[2]);
+
+        strResult = Integer.toString(intDate) + " " + monthThai[intMonth - 1] +
+                " " + (Integer.toString(intYear + 543)).substring(2,4);
+
+
+        return strResult;
+    }//MyConvert
+
+
+
 
     private void readOrderTABLE() {
         sumaryTotal = 0;

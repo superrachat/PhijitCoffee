@@ -104,7 +104,7 @@ public class ShowListOrder extends AppCompatActivity {
 
                 }//for
                 ShowListOrderAdapter showListOrderAdapter = new ShowListOrderAdapter(context,
-                        dataStrings,coffeeStrings,amountStrings,statusStrings);
+                        thaiDateStrings,coffeeStrings,amountStrings,statusStrings);
                 listView.setAdapter(showListOrderAdapter);
 
             } catch (Exception e) {
@@ -118,7 +118,8 @@ public class ShowListOrder extends AppCompatActivity {
 
         private String myConvertThaiDate(String dataString) {
             String tag = "5janV1", strResult = null;
-            String[] monthThai = new String[]{"ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค." };
+            String[] monthThai = new String[]{"ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.",
+                    "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค." };
             Log.d(tag, "Date ==>" + dataString);
             String[] strings = dataString.split("-");
             for (int i = 0; i < strings.length; i++) {
@@ -130,9 +131,12 @@ public class ShowListOrder extends AppCompatActivity {
             int intMonth = Integer.parseInt(strings[1]);
             int intYear = Integer.parseInt(strings[2]);
 
+            strResult = Integer.toString(intDate) + " " + monthThai[intMonth - 1] +
+                    " " + (Integer.toString(intYear + 543)).substring(2,4);
+
 
             return strResult;
-        }
+        }//MyConvert
 
 
     }//SynOrderTABLE

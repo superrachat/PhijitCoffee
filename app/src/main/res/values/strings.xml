@@ -30,6 +30,14 @@
     <string name="vol">จำนวน</string>
     <string name="sta">รับ</string>
     <string name="back">ย้อนกลับ</string>
-
+    <string name="hr1">ชั่วโมง</string>
+    <string name="hr2">ชั่วโมง</string>
+    <string name="hr3">ชั่วโมง</string>
+    <string name="hr4">ชั่วโมง</string>
+    <string name="price">ราคา</string>
+    <string name="amount">จำนวน</string>
+    <string name="addmore">เพิ่มรายการสินค้า</string>
+    <string name="confirmorder">ยืนยัน</string>
+    <string name="touch">*แตะเพื่อลบรายการ*</string>
 
 </resources>

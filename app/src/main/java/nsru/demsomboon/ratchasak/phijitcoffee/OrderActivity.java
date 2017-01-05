@@ -148,7 +148,7 @@ public class OrderActivity extends AppCompatActivity {
                         } else {
                             MyAlertDialog myAlertDialog = new MyAlertDialog();
                             myAlertDialog.myDialog(OrderActivity.this,
-                                    " ยังไม่ได้ Login ", " กรูณาสมัครสมาชิก ");
+                                    " ยังไม่ได้ Login ", " กรุณาสมัครสมาชิก ");
                         }
 
                     }//OnItemClick
