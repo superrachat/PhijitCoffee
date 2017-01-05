@@ -43,7 +43,7 @@ public class ShowListOrder extends AppCompatActivity {
     private class SynOrderTABLE extends AsyncTask<String, Void, String> {
         //Explicit
         private Context context;
-        private String[] dataStrings, coffeeStrings, amountStrings, statusStrings;
+        private String[] dataStrings, coffeeStrings, amountStrings, statusStrings, thaiDateStrings;
 
         public SynOrderTABLE(Context context) {
             this.context = context;
@@ -82,6 +82,7 @@ public class ShowListOrder extends AppCompatActivity {
                 coffeeStrings = new String[jsonArray.length()];
                amountStrings = new String[jsonArray.length()];
                 statusStrings= new String[jsonArray.length()];
+                thaiDateStrings = new String[jsonArray.length()];
 
                 for (int i=0;i<jsonArray.length();i++) {
 
@@ -89,6 +90,7 @@ public class ShowListOrder extends AppCompatActivity {
                     dataStrings[i] = jsonObject.getString("Date");
                     coffeeStrings[i] = jsonObject.getString("Coffee");
                     amountStrings[i] = jsonObject.getString("Amount");
+                    thaiDateStrings[i] = myConvertThaiDate(dataStrings[i]);
 
                     String strStatus = jsonObject.getString("status");
                     if (strStatus .length()==1) {
@@ -114,6 +116,23 @@ public class ShowListOrder extends AppCompatActivity {
 
         }//OnPost
 
+        private String myConvertThaiDate(String dataString) {
+            String tag = "5janV1", strResult = null;
+            String[] monthThai = new String[]{"ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค." };
+            Log.d(tag, "Date ==>" + dataString);
+            String[] strings = dataString.split("-");
+            for (int i = 0; i < strings.length; i++) {
+                Log.d(tag, "strings(" + i + ")==>" + strings[i]);
+
+            }
+            //for
+            int intDate = Integer.parseInt(strings[0]);
+            int intMonth = Integer.parseInt(strings[1]);
+            int intYear = Integer.parseInt(strings[2]);
+
+
+            return strResult;
+        }
 
 
     }//SynOrderTABLE

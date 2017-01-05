@@ -22,9 +22,14 @@
     <string name="list_order">ดูรายการสั่งกาแฟ</string>
     <string name="finish">รับแล้ว</string>
     <string name="non_finish">รอ</string>
-    <string name="aboutMe">เกี่ยวกันร้าน</string>
+    <string name="aboutMe">เกี่ยวกับร้าน</string>
     <string name="money">จำนวนเงิน</string>
     <string name="thb">บาท</string>
+    <string name="date">วันที่</string>
+    <string name="coffee">รายการ</string>
+    <string name="vol">จำนวน</string>
+    <string name="sta">รับ</string>
+    <string name="back">ย้อนกลับ</string>
 
 
 </resources>
